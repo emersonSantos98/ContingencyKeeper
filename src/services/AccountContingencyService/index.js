@@ -17,4 +17,13 @@ export default class AccountContingencyService {
         }
 
     }
+
+    async createAccountContingency(data) {
+        try {
+            const response = await this.accountContingency.createAccountContingency(data);
+            return response;
+        } catch (error) {
+            throw new ErrorMessage().message(error, 'Erro ao criar conta de contingência');
+        }
+    }
 }

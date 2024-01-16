@@ -25,7 +25,7 @@ export default class AccountContingency {
 
     async createAccountContingency(data) {
         try {
-            const response = await axios.post('/account-contingency', data);
+            const response = await axios.post('/api/accounts', data);
             return response.data;
         } catch (error) {
             throw new CustomError().message(error, 'Erro ao criar dados da conta de contingência');
